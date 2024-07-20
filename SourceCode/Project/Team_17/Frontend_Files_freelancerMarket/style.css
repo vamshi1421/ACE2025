@@ -1,0 +1,67 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    
+    overflow: hidden;
+}
+
+header {
+    background: #2cab83;
+    background-image: linear-gradient(rgb(87, 40, 133), rgb(9, 56, 49));
+    color: #fff;
+    padding: 1rem 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: #fff;
+
+    
+}
+
+.banner {
+    
+    color: #f5ecec;
+    text-align: center;
+    padding: 5rem 0;
+    background-image: url('homebg.jpg'); /* Path to your image */
+    
+    background-size: cover; /* Ensures the image covers the entire viewport */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-position: center; /* Centers the image */
+    margin: 0; /* Removes default margin around the body */
+    height: 100vh; /* Sets the height to the full viewport height */
+    overflow: hidden; /* Ensures no scrollbars are shown */
+    
+}
+
+.banner .cta {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background: #007BFF;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}
