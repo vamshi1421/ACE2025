@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freelancer Settings</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #5c4a4a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.settings-page {
+    background-color: #5c4a4a;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 600px;
+}
+
+h2, h3 {
+    color: orangered;
+}
+
+.section {
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    color: orangered;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input, .form-group textarea {
+    width: calc(100% - 12px);
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid orangered;
+    border-radius: 4px;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.form-group button {
+    padding: 10px;
+    font-size: 18px;
+    background-color: white;
+    color:orangered;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.form-group button:hover {
+    background-color: #45a049;
+}
+
+    </style>
+</head>
+<body>
+    <div class="settings-page">
+        <h2>Account Settings</h2>
+        
+        <div class="section">
+            <h3>Profile Settings</h3>
+            <form action="#">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" value="JohnDoe" disabled>
+                </div>
+                <div class="form-group">
+                    <label for="fullname">Full Name</label>
+                    <input type="text" id="fullname" name="fullname" value="John Doe">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" value="johndoe@example.com">
+                </div>
+                <div class="form-group">
+                    <label for="bio">Bio</label>
+                    <textarea id="bio" name="bio" rows="4">Experienced freelancer specializing in web development.</textarea>
+                </div>
+                <div class="form-group">
+                    <button type="submit">Save Changes</button>
+                </div>
+            </form>
+        </div>
+        
+        <div class="section">
+            <h3>Notification Settings</h3>
+            <form action="#">
+                <div class="form-group">
+                    <label for="notifications">Receive Email Notifications</label>
+                    <input type="checkbox" id="notifications" name="notifications" checked>
+                </div>
+                <div class="form-group">
+                    <label for="newsletter">Subscribe to Newsletter</label>
+                    <input type="checkbox" id="newsletter" name="newsletter">
+                </div>
+                <div class="form-group">
+                    <button type="submit">Update Settings</button>
+                </div>
+            </form>
+        </div>
+        
+        <div class="section">
+            <h3>Password Settings</h3>
+            <form action="#">
+                <div class="form-group">
+                    <label for="current-password">Current Password</label>
+                    <input type="password" id="current-password" name="current-password" required>
+                </div>
+                <div class="form-group">
+                    <label for="new-password">New Password</label>
+                    <input type="password" id="new-password" name="new-password" required>
+                </div>
+                <div class="form-group">
+                    <label for="confirm-password">Confirm New Password</label>
+                    <input type="password" id="confirm-password" name="confirm-password" required>
+                </div>
+                <div class="form-group">
+                    <button type="submit">Change Password</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

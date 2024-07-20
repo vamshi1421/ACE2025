@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up & Sign In</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color:#5c4a4a;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color:black;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            width: 300px;
+            text-align: center;
+        }
+        h2 {
+            margin-bottom: 20px;
+            color: orange;
+        }
+        input[type="text"], input[type="email"], input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        button {
+            width: 100%;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .social-login {
+            margin-top: 20px;
+        }
+        .social-login button {
+            width: 100%;
+            padding: 10px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .google-btn {
+            background-color: #dd4b39;
+            color: white;
+        }
+        .facebook-btn {
+            background-color: #3b5998;
+            color: white;
+        }
+        .google-btn:hover {
+            background-color: #c23321;
+        }
+        .facebook-btn:hover {
+            background-color: #2d4373;
+        }
+        .toggle-form {
+            margin-top: 10px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Sign Up & Sign In</h2>
+        <form id="signup-form">
+            <input type="text" placeholder="Full Name" required>
+            <input type="email" placeholder="Email Address" required>
+            <input type="password" placeholder="Password" required>
+            <button type="submit">Sign Up</button>
+        </form>
+        <form id="signin-form" style="display: none;">
+            <input type="email" placeholder="Email Address" required>
+            <input type="password" placeholder="Password" required>
+            <button type="submit">Sign In</button>
+        </form>
+        <div class="toggle-form">
+            <a href="#" onclick="toggleForm()">Already have an account? Sign In</a>
+        </div>
+        <div class="social-login">
+            <button class="google-btn" onclick="signInWithGoogle()">Sign In with Google</button>
+            <button class="facebook-btn" onclick="signInWithFacebook()">Sign In with Facebook</button>
+        </div>
+    </div>
+
+    <script>
+        function toggleForm() {
+            var signupForm = document.getElementById('signup-form');
+            var signinForm = document.getElementById('signin-form');
+            var toggleText = document.querySelector('.toggle-form a');
+
+            if (signupForm.style.display === 'none') {
+                signupForm.style.display = 'block';
+                signinForm.style.display = 'none';
+                toggleText.textContent = "Already have an account? Sign In";
+            } else {
+                signupForm.style.display = 'none';
+                signinForm.style.display = 'block';
+                toggleText.textContent = "Don't have an account? Sign Up";
+            }
+        }
+
+        function signInWithGoogle() {
+            // Implement Google sign-in functionality
+            alert('Signing in with Google (not implemented)');
+        }
+
+        function signInWithFacebook() {
+            // Implement Facebook sign-in functionality
+            alert('Signing in with Facebook (not implemented)');
+        }
+    </script>
+</body>
+</html>
